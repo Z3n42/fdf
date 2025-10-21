@@ -6,14 +6,14 @@
 /*   By: ingonzal <ingonzal@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 15:14:19 by ingonzal          #+#    #+#             */
-/*   Updated: 2021/09/02 14:33:25 by ingonzal         ###   ########.fr       */
+/*   Updated: 2021/09/19 14:45:48 by ingonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 #include <stdlib.h>
 
-size_t	ft_strlen_gnl(char *str, char c)
+size_t	ft_gnlen(char *str, char c)
 {
 	int	counter;
 
@@ -40,15 +40,15 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 		s1 = malloc(sizeof 1);
 		s1[0] = '\0';
 	}
-	lens = ft_strlen_gnl(s1, 0);
-	array = ((char *)malloc((lens) + (ft_strlen_gnl(s2, 0) + 1) * (sizeof(char))));
+	lens = ft_gnlen(s1, 0);
+	array = ((char *)malloc((lens) + (ft_gnlen(s2, 0) + 1) * (sizeof(char))));
 	if (!array)
 		return (NULL);
 	counter = 0;
 	while (i < lens)
 		array[counter++] = s1[i++];
 	i = 0;
-	lens = ft_strlen_gnl(s2, 0);
+	lens = ft_gnlen(s2, 0);
 	while (i < lens)
 		array[counter++] = s2[i++];
 	array[counter] = '\0';
@@ -88,7 +88,7 @@ char	*ft_substr_gnl(char *s, unsigned int start, size_t len)
 	array = ((char *)malloc((len + 1) * sizeof(char)));
 	if (!array)
 		return (NULL);
-	if (start >= ft_strlen_gnl(s, 0))
+	if (start >= ft_gnlen(s, 0))
 	{
 		array[0] = '\0';
 		return (array);
@@ -112,7 +112,7 @@ char	*ft_substr2_gnl(char *s, unsigned int start, size_t len)
 	array = ((char *)malloc((len + 1) * sizeof(char)));
 	if (!array)
 		return (NULL);
-	if (start >= ft_strlen_gnl(s, 0))
+	if (start >= ft_gnlen(s, 0))
 	{
 		free(s);
 		free(array);

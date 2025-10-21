@@ -6,7 +6,7 @@
 /*   By: ingonzal <ingonzal@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/28 12:32:47 by ingonzal          #+#    #+#             */
-/*   Updated: 2021/09/03 19:09:31 by ingonzal         ###   ########.fr       */
+/*   Updated: 2021/09/19 14:50:11 by ingonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -61,7 +61,7 @@ int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstclear(t_list **lst, void(*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
@@ -76,11 +76,10 @@ int		ft_printf(const char *format, ...);
 char	*ft_strjoin(char const *s1, char const *s2);
 
 int		get_next_line(int fd, char **line);
-size_t	ft_strlen_gnl(char *str, char c);
+size_t	ft_gnlen(char *str, char c);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 char	*ft_strchr_gnl(const char *s, int c);
 char	*ft_substr_gnl(char *s, unsigned int start, size_t len);
 char	*ft_substr2_gnl(char *s, unsigned int start, size_t len);
-
 
 #endif
