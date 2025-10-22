@@ -315,7 +315,7 @@ typedef struct s_a {
 
 ### Isometric Projection
 
-Your implementation uses a **custom angle of 0.7 radians** (≈40°) instead of the standard 30°:
+Implementation uses a **custom angle of 0.7 radians** (≈40°) instead of the standard 30°:
 
 ```c
 // In ft_draw_x() and ft_draw_y()
@@ -451,7 +451,7 @@ Through this project, I gained deep understanding of:
 
 **Why 0.7 radians?**
 - Standard isometric: 30° (0.523 rad)
-- Your choice: 40° (0.7 rad)
+- My choice: 40° (0.7 rad)
 - Result: Slightly more "top-down" view
 
 **Why z * 5?**
